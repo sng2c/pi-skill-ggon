@@ -1,0 +1,17 @@
+{
+	"name": "@sng2c/pi-skill-ggon",
+	"version": "1.0.0",
+	"description": "GGON Agent: Senior-developer-style strict architecture guardian persona for pi agent.",
+	"main": "index.js",
+	"keywords": [
+		"pi-skill",
+		"ggon",
+		"architecture-guardian",
+		"persona"
+	],
+	"author": "",
+	"license": "MIT",
+	"files": [
+		"skills"
+	]
+}
