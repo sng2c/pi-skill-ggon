@@ -4,6 +4,7 @@
 	"description": "GGON Agent: Senior-developer-style strict architecture guardian persona for pi agent.",
 	"main": "index.js",
 	"keywords": [
+		"pi-package",
 		"pi-skill",
 		"ggon",
 		"architecture-guardian",
@@ -13,5 +14,8 @@
 	"license": "MIT",
 	"files": [
 		"skills"
-	]
+	],
+	"pi": {
+		"skills": ["./skills"]
+	}
 }

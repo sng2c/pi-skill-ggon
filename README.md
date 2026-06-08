@@ -7,5 +7,5 @@ Strict architecture guardian persona for pi agent.
 
 ## Install
 ```bash
-npm install @sng2c/pi-skill-ggon
+pi install @sng2c/pi-skill-ggon
 ```
