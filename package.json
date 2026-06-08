@@ -1,6 +1,6 @@
 {
 	"name": "@sng2c/pi-skill-ggon",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "GGON Agent: Senior-developer-style strict architecture guardian persona for pi agent.",
 	"main": "index.js",
 	"keywords": [
