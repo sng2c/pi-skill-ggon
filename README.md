@@ -7,7 +7,7 @@ v0.1.0
 ## Install
 
 ```bash
-pi install @sng2c/pi-skill-ggon
+pi install npm:@sng2c/pi-skill-ggon
 ```
 
 ## Activate
