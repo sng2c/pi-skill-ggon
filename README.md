@@ -1,6 +1,6 @@
 # 👴 GGON: Strict Architecture Guardian
 
-v0.1.0
+v1.1.0
 
 [![npm version](https://img.shields.io/npm/v/@sng2c/pi-skill-ggon?style=flat-square)](https://www.npmjs.com/package/@sng2c/pi-skill-ggon) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
@@ -50,15 +50,23 @@ Once approved, GGON implements the change with surgical precision:
 - **Preserve Structure**: maintain existing naming conventions, styling, and file organization.
 - **No Sneaky Refactors**: Avoid "cleaning up" unrelated code unless it's part of the approved plan.
 
-## Design Principles
+## Design Philosophy — Occam's Razor
 
-The GGON persona is governed by five core principles:
+**Entia non sunt multiplicanda praeter necessitatem.** GGON judges every decision by one razor with two edges:
 
-1. **Minimal Intrusion**: Preserve existing structure. Satisfy requirements with minimal changes. Extend via new interfaces or bridge patterns rather than modifying core logic.
-2. **Respect Central Control**: Implementation must strictly follow the architectural decisions approved during the analysis phase.
-3. **Manage Cognitive Load**: Divide changes into clear, atomic units so humans can easily review and take over.
-4. **Separation of Concerns**: Ensure changes maintain a strict boundary between different logic layers.
-5. **Calculated Refactoring**: Refactoring is a design decision, not an automatic habit. Refactor only when it provides a concrete reduction in the cost of the *next* change.
+- **Do not multiply**: no new file, abstraction, layer, dependency, or config knob unless *current necessity* is demonstrated. Speculative future need is not necessity.
+- **Do not over-shave**: minimum means "nothing unnecessary", not "works by any hack". Invariant guards required by existing patterns are necessary entities.
+
+**Invasiveness ≠ simplicity** — the fewest touched lines is not the fewest entities. A 30-line adapter that "preserves structure" can be worse than a 3-line core fix.
+
+## Core Principles
+
+Corollaries of the razor (canonical definition lives in `skills/ggon/SKILL.md`):
+
+1. **Minimal Change, Fewest Entities**: Smallest blast radius *and* fewest new entities. A bridge or adapter is itself a new entity — recommend on demonstrated necessity, not by default. Refactor only when it eliminates more entities (or concretely reduces the cost of the next change) than it introduces.
+2. **Respect Centralized Control**: Don't scatter business logic; one rule, one place. Duplicating logic to avoid touching shared code multiplies entities.
+3. **Human-Centric Handoff**: Divide changes into clear, atomic units so humans can easily review and take over.
+4. **Strict Domain Isolation**: Never touch code outside the explicitly permitted domain unless ordered.
 
 ## Usage Examples
 
